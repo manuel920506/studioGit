@@ -35,6 +35,7 @@ git reset --hard(undo)
 (creare il file .gitignore dove si scrive i file/cartelle che si devono ignorare)  
 Importante, i conflitti vanno risolti, e dopo subito dopo si deve fare un commit per registrare la soluzione nella storia nel tempo.
 
+git branch -M main (renomina in main, il branch sul quale sono posizionato)
 git branch rama-villanos (crea un nuovo branch)
 git checkout rama-villanos (switchare per un'altro ramo)
 git branch (per vedere i rami presenti, si vede anche su quale sono attualmente posizionato)
