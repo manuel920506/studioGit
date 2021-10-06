@@ -1,0 +1,90 @@
+git config --global user.name "Manuel Rodriguez"
+git config --global user.email "manuel.rodriguez15@libero.it"
+git init
+git status
+git add . (includi tutto)
+git commit -m "Primo commit"
+
+git checkout -- .  (per tornare indietro, perdo i cambi)
+git branch
+git branch -m master main(renomino in main il ramo principale)
+
+git commit -am "add e commit insiemi, ma solo se il file è seguito"
+git log
+git add cartella/*.html
+git add cartella/
+git status --short
+git config --global alias.s "status --short"
+git config --global -e per editare il file di configurazione.
+git log --oneline
+git diff 
+git diff --staged  (per vedere le differenze nei file che sono stagionati)
+git commit --amend -m "Instalaciones actualizadas"  (per riparare l'ultimo commit)
+git reset --soft  HEAD^ (portami all'ultimo commit indietro nel tempo => tre commit indietro nel tempo git reset --soft  HEAD^3)
+git commit --amend (si apre l'editore di testo.)
+
+git reset --soft 633ad25f637e1a74eab3bfd63e13a6f0abe74556  (portami indietro all'hash in questione)
+git reset --mixed  bfaf5c5c29e08f4b4d4d49c9bcd7458bdcb4dd63 (mi porta indietro nel tempo ma lasciando i cambi senza commit)
+git reset --hard  bfaf5c5c29e08f4b4d4d49c9bcd7458bdcb4dd63  (torna essattamente indietro nel tempo com'era prima)
+
+git reflog (mi mostra tutti i log nel tempo)
+git reset --hard  c0df84c (torno al commit fatto avanti nel tempo)
+git mv destruir-mundo.md salvar-mundo.md   (uso el move file per renominar un file)
+git reset --hard(undo)
+
+(creare il file .gitignore dove si scrive i file/cartelle che si devono ignorare)  
+Importante, i conflitti vanno risolti, e dopo subito dopo si deve fare un commit per registrare la soluzione nella storia nel tempo.
+
+git branch rama-villanos (crea un nuovo branch)
+git checkout rama-villanos (switchare per un'altro ramo)
+git branch (per vedere i rami presenti, si vede anche su quale sono attualmente posizionato)
+git merge rama-villanos (stando nel ramo master, unisco a quest'ultimo, le modifiche gestite dal ramo rama-villanos)
+git branch -d rama-villanos (elimina un branch)
+git branch -d rama-villanos -f (elimina un branch in modo forzato)
+git checkout -b rama-villanos  (crea un ramo e mi sposta su quest'ultima automaticamente)
+
+git tag versione01.01.1   (tag per arrivare prima a dove voglio in futuro)
+git tag (elenco i tag)
+git tag -d nometag (eliminare un tag)
+git tag -a v1.0.0 -m "Versione 1.0.0 pronta" 
+git tag -a v0.1.0 hashDelCommitChevoglioCambiare -m "Versione Alpha pronta" 
+git show  v0.1.0 (mi dovrebbe mostrare più informazioni tipo messaggio e data, usuario ecc)
+
+git stash    (stagionare un mancato commit, per riprendere dopo il lavoro)
+git stash list  (mi fa vedere tutti i lavori in stash)
+git stash pop  (mi restaura le modifiche in stash)
+git stash clear (elimina tutti gli stash)
+git stash apply 2 (restauro uno stash specifico)
+git stash drop 0 (cancella l'ultimo stash)
+git stash show 0 (mostrami qualche informazione riguardo allo stash , ovvero l'ultimo)
+git stash save "Agregamos a loki in villanos"  (faccio uno stash con un specifico nome)
+git rebase master  "Sposta i commit di un'altra rama, nella quale sono pisizionato iinizialmente, dopo l'head, ma nel branch master.)
+git merge rama-misiones-completadas (stando posizionato sul branch master, porto tutte le modifiche da uno specifico brach, al mio ramo master)
+git rebase -i HEAD~4 (mi mostra gli ultimi 4 commit, e avrò a disposizione vari commandi per operare sui commit su cui sceglierò di lavorare)
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
