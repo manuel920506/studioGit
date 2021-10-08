@@ -1,23 +1,23 @@
-git config --global user.name "Manuel Rodriguez"
+git config --global user.name "Manuel Rodriguez"   (da non fare, visto che è già configurato da onit)
 git config --global user.email "manuel.rodriguez15@libero.it"
-git init
-git status
+git init  (per inizializzare got nella cartella dov'è il progetto)
+git status  (per vedere la situazione attuale)
 git add . (includi tutto)
 git commit -m "Primo commit"
 
 git checkout -- .  (per tornare indietro, perdo i cambi)
-git branch
+git branch  (vedo il mio attuale branch)
 git branch -m master main(renomino in main il ramo principale)
 
-git commit -am "add e commit insiemi, ma solo se il file è seguito"
-git log
-git add cartella/*.html
-git add cartella/
-git status --short
+git commit -am "il mio commento" (add e commit insiemi, ma solo se il file è seguito)
+git log  (vedo i log delle cose fatte)
+git add cartella/*.html (seguo tutti file html)
+git add cartella/      (seguo tuutto all'interno della cartella in questione)
+git status --short   
 git config --global alias.s "status --short"
 git config --global -e per editare il file di configurazione.
 git log --oneline
-git diff 
+git diff  (per vedere i conflitti)
 git diff --staged  (per vedere le differenze nei file che sono stagionati)
 git commit --amend -m "Instalaciones actualizadas"  (per riparare l'ultimo commit)
 git reset --soft  HEAD^ (portami all'ultimo commit indietro nel tempo => tre commit indietro nel tempo git reset --soft  HEAD^3)
@@ -32,6 +32,7 @@ git reset --hard  c0df84c (torno al commit fatto avanti nel tempo)
 git mv destruir-mundo.md salvar-mundo.md   (uso el move file per renominar un file)
 git reset --hard(undo)
 
+git rm -rf --cached (per eliminare ttutti i file, in caso che dia problemi il file .gitignore)
 (creare il file .gitignore dove si scrive i file/cartelle che si devono ignorare)  
 Importante, i conflitti vanno risolti, e dopo subito dopo si deve fare un commit per registrare la soluzione nella storia nel tempo.
 
@@ -62,6 +63,9 @@ git stash save "Agregamos a loki in villanos"  (faccio uno stash con un specific
 git rebase master  "Sposta i commit di un'altra rama, nella quale sono pisizionato iinizialmente, dopo l'head, ma nel branch master.)
 git merge rama-misiones-completadas (stando posizionato sul branch master, porto tutte le modifiche da uno specifico brach, al mio ramo master)
 git rebase -i HEAD~4 (mi mostra gli ultimi 4 commit, e avrò a disposizione vari commandi per operare sui commit su cui sceglierò di lavorare)
+
+git push --tags (se vogliamo che i tags vengano caricati nel repositorio online di github)
+
 
 
 
